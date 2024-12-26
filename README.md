@@ -29,7 +29,7 @@ pip install -r requirements.txt
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/<your-username>/face-recognition-backend.git
+git clone https://github.com/brayanquirozurrutia/face-recognition-backend.git
 cd face-recognition-backend
 ```
 
@@ -109,5 +109,5 @@ face-recognition-backend/
 
 ## Author
 
-[Brayan Quiroz Urrutia](https://github.com/<your-username>)
+[Brayan Quiroz Urrutia](https://github.com/brayanquirozurrutia)
 

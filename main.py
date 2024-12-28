@@ -1,8 +1,9 @@
-from fastapi import FastAPI
+from fastapi import FastAPI, WebSocket
 from contextlib import asynccontextmanager
 from database import Base, engine
 from redis_connection import redis
 from routes import recognition
+from routes.websocket_recognition import websocket_endpoint
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
@@ -23,6 +24,10 @@ async def lifespan(app: FastAPI):
 app = FastAPI(lifespan=lifespan)
 
 app.include_router(recognition.router, prefix="/api/recognition", tags=["Recognition"])
+
+@app.websocket("/ws/recognize")
+async def recognize_websocket(websocket: WebSocket):
+    await websocket_endpoint(websocket)
 
 @app.get("/")
 async def root():

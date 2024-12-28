@@ -17,3 +17,9 @@ class User(Base):
         :return: MD5 hash of the embedding
         """
         return md5(embedding).hexdigest()
+
+class DetectedFace(Base):
+    __tablename__ = "detected_faces"
+    id = Column(Integer, primary_key=True, index=True)
+    face_id = Column(String, unique=True, index=True, nullable=False)
+    image = Column(LargeBinary)  # Almacena la imagen en binario (como blob)

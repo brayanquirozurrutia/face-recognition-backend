@@ -143,4 +143,4 @@ face-recognition-backend/
 
 ## Author
 
-[Brayan Quiroz Urrutia](https://github.com/brayanquirozurrutia)
+Developed with ❤️ by [Brayan Nicolas Quiroz Urrutia](https://github.com/brayanquirozurrutia).
